@@ -1,15 +1,15 @@
-struct cli {
+use clap::Parser;
+
+//search for a pattern in a file and display the line that contain it.
+#[derive(Parser)]
+struct Cli {
+    //the pattern to look for 
     pattern: String,
+    //the path to the file to read
     path: std::path::PathBuf,
 }
 fn main() {
-    let pattern = std::env::args().nth(1).expect("no pattern given");
-    let path = std::env::args().nth(2).expect("no path given");
-
-    let args = cli {
-        pattern,
-        path: std::path::PathBuf::from(path)
-    };
+    let args = Cli::parse();
 
     println!("pattern: {:?}, paath: {:?}", args.pattern, args.path);
 }
