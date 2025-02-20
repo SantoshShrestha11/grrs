@@ -53,6 +53,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "anyhow"
+version = "1.0.96"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6b964d184e89d9b6b67dd2715bc8e74cf3107fb2b529990c90cf517326150bf4"
+
+[[package]]
 name = "clap"
 version = "4.5.30"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -102,6 +108,7 @@ checksum = "5b63caa9aa9397e2d9480a9b13673856c78d8ac123288526c37d7839f2a86990"
 name = "grrs"
 version = "0.1.0"
 dependencies = [
+ "anyhow",
  "clap",
 ]
 
